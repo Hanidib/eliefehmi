@@ -1,0 +1,6 @@
+100.95.39.124 - - [21/Oct/2025:08:20:48 -0700] "GET / HTTP/2.0" 200 1017 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0" 7 **0/7750**
+100.95.39.124 - - [21/Oct/2025:08:20:49 -0700] "GET /favicon.ico HTTP/2.0" 404 703 "https://1pq.1b4.mytemp.website/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/110.0" 5 **0/5606**
+66.249.79.33 - - [21/Oct/2025:11:15:37 -0700] "GET /robots.txt HTTP/1.1" 404 703 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" 6 **0/6728**
+23.20.190.199 - - [21/Oct/2025:12:12:58 -0700] "GET / HTTP/2.0" 200 5190 "-" "okhttp/4.9.2" 8 **0/8501**
+23.20.190.199 - - [21/Oct/2025:12:12:58 -0700] "GET /favicon.ico HTTP/2.0" 404 1699 "-" "okhttp/4.9.2" 5 **0/5676**
+23.20.190.199 - - [21/Oct/2025:12:12:59 -0700] "GET /favicon.png HTTP/2.0" 404 1699 "-" "okhttp/4.9.2" 5 **0/5871**

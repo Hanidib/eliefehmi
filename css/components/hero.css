@@ -1,0 +1,273 @@
+/* White Background Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 20px 10px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Main heading with image animation */
+.main-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -65px;
+  width: 100%;
+}
+
+.heading-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Picture starts on right and floats to left */
+.profile-image-side {
+  width: 450px;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  flex-shrink: 0;
+  opacity: 1;
+  transform: none;
+  margin-left: 120px;
+}
+
+.profile-image-side img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes floatFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) scale(0.8);
+  }
+  70% {
+    opacity: 0.8;
+    transform: translateX(-20px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.text-content {
+  text-align: center;
+  flex: 1;
+  min-width: 300px;
+  opacity: 0;
+  animation: fadeInText 1s ease forwards 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-main-text {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.text-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.text-line-1 {
+  color: #2c2c2c;
+  animation: fadeInUp 1.2s ease forwards 0.7s;
+  margin-bottom: 15px;
+}
+
+.text-line-2 {
+  color: #febd0f;
+  animation: fadeInUp 1.2s ease forwards 1s;
+  position: relative;
+  display: inline-block;
+}
+
+/* Dynamic wrapper for SVG animation */
+.dynamic-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.dynamic-wrapper svg {
+  position: absolute;
+  bottom: -70px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  overflow: visible;
+}
+
+.dynamic-wrapper path {
+  fill: none;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke: #febd0f;
+  animation: draw 10s ease-in-out infinite alternate;
+  animation-delay: 1.5s;
+}
+
+.line-3 {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #666;
+  max-width: 500px;
+  margin: 40px 0 0 0;
+  padding: 0;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.2s ease forwards 1.5s;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #febd0f, #ffcc00);
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(254, 189, 15, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards 2s;
+  text-align: center;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(254, 189, 15, 0.5);
+  background: linear-gradient(135deg, #ffcc00, #febd0f);
+}
+
+/* Original Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1000;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-main-text {
+    font-size: 3.5rem;
+    margin-top: 100px;
+  }
+
+  .profile-image-side {
+    display: none; /* Hide the image element on smaller screens */
+  }
+
+  .hero-section {
+    background: url("../../pictures/ELIE FEHMI3.png") center center / cover
+      no-repeat;
+    background-attachment: scroll;
+  }
+
+  .text-content {
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading-with-image {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .text-content {
+    text-align: center;
+    animation: fadeInText 1s ease forwards 0.5s;
+    padding: 20px;
+    max-width: 95%;
+  }
+
+  .hero-main-text {
+    font-size: 3rem;
+    margin-top: 100px;
+  }
+
+  .line-3 {
+    font-size: 1.2rem;
+    margin: 30px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 100px 20px 40px;
+  }
+
+  .hero-main-text {
+    font-size: 2rem;
+    margin-top: 100px;
+  }
+
+  .line-3 {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    margin-top: 30px;
+  }
+
+  .text-content {
+    padding: 15px;
+  }
+}

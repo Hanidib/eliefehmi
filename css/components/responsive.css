@@ -1,0 +1,180 @@
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .name-title {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .name-title {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .name-title {
+    font-size: 4rem;
+  }
+
+  .about-text {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-image {
+    height: 250px;
+  }
+
+  .services-cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+
+  .service-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .testimonials-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-form {
+    padding: 30px 20px;
+  }
+
+  .contact-image {
+    height: 300px;
+    order: -1;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footer-links {
+    align-items: center;
+    gap: 15px;
+  }
+
+  .legal-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name-title {
+    font-size: 3rem;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .gallery-section {
+    padding: 60px 15px;
+  }
+
+  .gallery-image {
+    height: 200px;
+  }
+
+  .gallery-caption {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .services-section {
+    padding: 60px 15px;
+  }
+
+  .service-card {
+    padding: 25px 15px;
+  }
+
+  .service-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .service-card p {
+    font-size: 1rem;
+  }
+
+  .testimonials-section {
+    padding: 60px 15px;
+  }
+
+  .testimonial-card {
+    padding: 25px 15px;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .contact-section {
+    padding: 60px 15px;
+  }
+
+  .contact-form {
+    padding: 25px 15px;
+  }
+
+  /* .form-group input,
+  .form-group textarea {
+    padding: 12px;
+  } */
+
+  .contact-image {
+    height: 250px;
+  }
+
+  .footer-section {
+    padding: 30px 15px;
+  }
+
+  .footer-info {
+    min-width: auto;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
+
+  .social-link {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+}
