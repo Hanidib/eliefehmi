@@ -29,18 +29,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // Server settings (same as your contact form)
+        // ✅ GO DADDY MAIL SETTINGS (same as contact.php)
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'hanidib21@gmail.com';
-        $mail->Password   = 'mhny irpk ldzr enrv';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+        $mail->Host       = 'localhost';
+        $mail->SMTPAuth   = false;
+        $mail->Port       = 25;
+        $mail->SMTPAutoTLS = false;
 
-        // Recipients
-        $mail->setFrom('hanidib21@gmail.com', 'Program Notifications');
-        $mail->addAddress('hanidib21@gmail.com', 'Elie Fehmi');
+        // ✅ USE YOUR DOMAIN EMAIL (same as contact.php)
+        $mail->setFrom('elie@eliefehmi.com', 'Program Notifications');
+        $mail->addAddress('elie.fehme@gmail.com', 'Elie Fehmi');
         $mail->addReplyTo($email);
 
         // Content

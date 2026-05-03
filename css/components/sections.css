@@ -59,7 +59,9 @@
   border-radius: 15px;
   overflow: hidden;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .gallery-item:hover {
@@ -111,7 +113,9 @@
   padding: 40px 30px;
   text-align: center;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: 1px solid rgba(234, 250, 7, 0.2);
   position: relative;
   overflow: hidden;
@@ -181,7 +185,9 @@
   padding: 40px 30px;
   text-align: left;
   box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: 1px solid rgba(234, 250, 7, 0.2);
   position: relative;
   overflow: hidden;
@@ -709,15 +715,13 @@
   background: var(--primary-bg);
   padding: 0 5px;
 }
-/* Footer Contact Styles */
-.company-email,
-.company-phone {
+/* Footer Email Styles */
+.company-email {
   margin: 8px 0;
   color: var(--text-secondary);
 }
 
-.company-email a,
-.company-phone a {
+.company-email a {
   color: var(--accent-secondary);
   text-decoration: none;
   font-weight: 600;
@@ -726,14 +730,12 @@
   padding: 2px 0;
 }
 
-.company-email a:hover,
-.company-phone a:hover {
+.company-email a:hover {
   color: #ffcc00;
   transform: translateY(-1px);
 }
 
-.company-email a::after,
-.company-phone a::after {
+.company-email a::after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -744,46 +746,35 @@
   transition: width 0.3s ease;
 }
 
-.company-email a:hover::after,
-.company-phone a:hover::after {
+.company-email a:hover::after {
   width: 100%;
 }
 
-/* Contact icons */
+/* Optional: Add an email icon before the email address */
 .company-email a::before {
   content: "✉️";
   margin-right: 8px;
   font-size: 0.9em;
 }
 
-.company-phone a::before {
-  content: "☎";
-  margin-right: 8px;
-  font-size: 0.9em;
-}
-
-/* Responsive contact styles */
+/* Responsive email styles */
 @media (max-width: 768px) {
-  .company-email,
-  .company-phone {
+  .company-email {
     text-align: center;
     margin: 10px 0;
   }
 
-  .company-email a,
-  .company-phone a {
+  .company-email a {
     font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .company-email a,
-  .company-phone a {
+  .company-email a {
     font-size: 0.9rem;
   }
 
-  .company-email a::before,
-  .company-phone a::before {
+  .company-email a::before {
     margin-right: 6px;
   }
 }
@@ -832,7 +823,8 @@
     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
   }
   50% {
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4),
+    box-shadow:
+      0 4px 12px rgba(37, 211, 102, 0.4),
       0 0 0 15px rgba(37, 211, 102, 0.1);
   }
 }

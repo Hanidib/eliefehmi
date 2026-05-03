@@ -28,18 +28,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        // Server settings
+        // ✅ GO DADDY MAIL SETTINGS
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
-        $mail->SMTPAuth   = true;
-        $mail->Username   = 'hanidib21@gmail.com';
-        $mail->Password   = 'mhny irpk ldzr enrv';
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+        $mail->Host       = 'localhost';
+        $mail->SMTPAuth   = false;
+        $mail->Port       = 25;
+        $mail->SMTPAutoTLS = false;
 
         // Recipients
-        $mail->setFrom('hanidib21@gmail.com', 'From Shadow to Light Website');
-        $mail->addAddress('hanidib21@gmail.com', 'Elie Fehmi');
+        $mail->setFrom('elie@eliefehmi.com', 'From Shadow to Light Website');
+        $mail->addAddress('elie.fehme@gmail.com', 'Elie Fehmi');
         $mail->addReplyTo($email, $name . ' ' . $lastname);
 
         // Content
@@ -73,19 +71,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
 
-        // Send auto-reply to client
+        // ✅ SEND AUTO-REPLY TO CLIENT (WITH GODADDY SETTINGS)
         $clientMail = new PHPMailer(true);
         $clientMail->isSMTP();
-        $clientMail->Host       = 'smtp.gmail.com';
-        $clientMail->SMTPAuth   = true;
-        $clientMail->Username   = 'hanidib21@gmail.com';
-        $clientMail->Password   = 'mhny irpk ldzr enrv';
-        $clientMail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $clientMail->Port       = 587;
+        $clientMail->Host       = 'localhost';
+        $clientMail->SMTPAuth   = false;
+        $clientMail->Port       = 25;
+        $clientMail->SMTPAutoTLS = false;
 
-        $clientMail->setFrom('hanidib21@gmail.com', 'Elie Fehmi - From Shadow to Light');
+        $clientMail->setFrom('elie@eliefehmi.com', 'Elie Fehmi - From Shadow to Light');
         $clientMail->addAddress($email, $name . ' ' . $lastname);
-        $clientMail->addReplyTo('hanidib21@gmail.com', 'Elie Fehmi');
+        $clientMail->addReplyTo('elie.fehme@gmail.com', 'Elie Fehmi');
 
         $clientMail->isHTML(true);
         $clientMail->Subject = "Thank you for your interest in $service";
@@ -109,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Thank you! Your booking request for $service has been sent successfully. We'll contact you within 24 hours to schedule your call.";
     } catch (Exception $e) {
         http_response_code(500);
-        echo "Sorry, there was an error sending your message. Please try again or contact us directly at hanidib21@gmail.com";
+        echo "Sorry, there was an error sending your message. Please try again or contact us directly at elie@eliefehmi.com";
     }
 } else {
     http_response_code(403);
